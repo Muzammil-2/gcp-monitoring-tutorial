@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: py-service
+  labels:
+    app: py
+spec:
+  ports:
+  - port: 80
+    name: py-service
+  clusterIP: LoadBalancer
+  selector:
+    app: py
