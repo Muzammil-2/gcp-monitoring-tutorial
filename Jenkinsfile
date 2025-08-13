@@ -18,5 +18,13 @@ pipeline {
                 git clone
             }
         }
+    stage('test'){
+            steps{
+                script{
+                    trivy fs --format=report.html .
+                }
+            }
+        }
+    
     }
 }
