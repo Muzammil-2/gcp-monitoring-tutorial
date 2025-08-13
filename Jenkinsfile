@@ -25,6 +25,14 @@ pipeline {
                 }
             }
         }
-    
+     stage('Code_Analysis'){
+            steps{
+                script{
+                    SONAR_SCANNER/bin/ -Dskip -Dtest --projectkey=''  --projectname='' .
+                }
+            }
+        }
+
+
     }
 }
